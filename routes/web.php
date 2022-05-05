@@ -14,9 +14,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    // return view('welcome');
-    Hunter::test();
+    return view('welcome');
+    // Hunter::test();
 });
+
+
+Route::get('/about',function(){
+    return view('about');
+});
+
+// Route::view('/about','about');
+
+// Route::get('/contact',function(){
+//     return view('contact');
+//     // return "My roll is $roll";
+//     // return redirect('/about');
+// })->name('contact-us');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact.us');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
