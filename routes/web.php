@@ -14,11 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    Hunter::test();
 });
-// Route::get('/test', function () {
-//     app()->make('first_service_helper');
-// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
