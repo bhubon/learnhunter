@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    // dd(app());
     return view('welcome');
     // Hunter::test();
 });
@@ -22,6 +23,10 @@ Route::get('/', function () {
 Route::get('/about',function(){
     return view('about');
 });
+
+Route::get('/country',function(){
+    return view('country');
+})->middleware('country');
 
 // Route::view('/about','about');
 

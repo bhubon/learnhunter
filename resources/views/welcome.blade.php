@@ -17,6 +17,13 @@
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
+                background: #fff;
+            }
+            div{
+                display: none;
+            }
+            .dark\:bg-gray-900{
+                background: #fff;
             }
         </style>
     </head>
