@@ -34,6 +34,7 @@
             <ul>
                 <li><a href="{{ url('about') }}">About</a></li>
                 <li><a href="{{ route('contact.us') }}">Contact</a></li>
+                <li><a href="{{ route('laravel') }}">Laravel</a></li>
             </ul>
             <br>
         
