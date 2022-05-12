@@ -12,6 +12,7 @@ class FirstController extends Controller
 {
     //__ index method
     public function index(){
+        // abort(404);
         return view('contact');
     }
     // country 
@@ -70,7 +71,11 @@ class FirstController extends Controller
             'email'=>'required|max:80',
             'password'=>'required|min:6|max:12'
         ]);
+        // sore the record on log file
         
-        dd($request->all());
+        \Log::channel('contactstore')->info('the contact form submitted by'.rand(1,20));
+        return redirect()->back();
+        
+        // dd($request->all());
     }
 }

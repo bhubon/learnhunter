@@ -59,6 +59,15 @@ Route::get('/test',function(Request $request){
     // $request->session()->put('email','bhbuonsd3@gmail.com');
     // session(['username','Bhubon']);
     
+    // Log::info('your age is '.rand(1,30));
+    // return redirect()->to('/');  
+    
+    $logfile = file(storage_path().'/logs/contact.log');
+    $collection = [];
+    foreach($logfile as $line_number => $line){
+        $collection[]=array('line'=>$line_number,'content'=>htmlspecialchars($line));
+    }
+    dd($collection);
     
 });
 Route::get('/all',function(Request $request){
